@@ -16,11 +16,7 @@ app.use(expressLayouts);
 app.use(express.static('public'));
 
 const mongoose = require('mongoose');
-<<<<<<< HEAD
 mongoose.connect(process.env.DATABASE_URL);
-=======
-mongoose.connect(process.env.DATABASE_URL, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex : true});
->>>>>>> e0b742e446b713c64445eea4506016c5a5c1048d
 const db = mongoose.connection;
 db.on('error', error => console.error(error));
 db.once('open', () => console.log('Connected to Mongoose'));
