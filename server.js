@@ -17,27 +17,10 @@ app.use(express.static('public'));
 
 const mongoose = require('mongoose');
 
-
-try {
-    // Connect to the MongoDB cluster
-     mongoose.connect(
-        process.env.DATABASE_URL,
-      { useNewUrlParser: true, useUnifiedTopology: true },
-      () => console.log(" Mongoose is connected")
-    );
-
-  } catch (e) {
-    console.log("could not connect");
-  }
-
-
-
-
-
-// mongoose.connect(process.env.DATABASE_URL, process.env.DATABASE_URL, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex : true});
-// const db = mongoose.connection;
-// db.on('error', error => console.error(error));
-// db.once('open', () => console.log('Connected to Mongoose'));
+mongoose.connect(process.env.DATABASE_URL, {useUnifiedTopology: true, useNewUrlParser: true, useCreateIndex : true});
+const db = mongoose.connection;
+db.on('error', error => console.error(error));
+db.once('open', () => console.log('Connected to Mongoose'));
 
 
 app.use('/', indexRouter)
