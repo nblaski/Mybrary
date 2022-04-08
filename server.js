@@ -26,6 +26,12 @@ db.once('open', () => console.log('Connected to Mongoose'));
 
 app.use('/', indexRouter)
 
-app.listen(process.env.PORT || 3000, ( req, res) => {
-    console.log('Server listening on port 3000');
+
+var port = process.env.PORT || "3000";
+Promise.resolve(app.listen(port)).then(() => {
+   console.log("Running!");
 });
+
+// app.listen(process.env.PORT || 3000, ( req, res) => {
+//     console.log('Server listening on port 3000');
+// });
