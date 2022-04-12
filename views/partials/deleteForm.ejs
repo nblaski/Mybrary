@@ -1,0 +1,8 @@
+<!-- NEVER USE A GET LINK TO DELETE ANYTHING-GOOGLE WEB CRAWLS AND FINDS ALL GET REQUESTS AND DELETES THEM FROM YOUR APP -->
+<!-- NEED TO USE FORM TAG TO DELETE INSTEAD OF ANCHOR -->
+<!-- _method overrides POST method and calls router.delete() method -->
+<form method="POST" action="<%= url %>?_method=DELETE">
+    <button type="submit">Delete</button>
+</form>
+
+    
