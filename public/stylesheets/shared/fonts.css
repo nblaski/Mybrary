@@ -1,14 +1,13 @@
-@font-face {
-    font-family: "Molengo";
-    src: url("/fonts/Molengo-Regular.woff2") format("woff2"), url('/fonts/Molengo-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-
-  }
-
   @font-face {
     font-family: "Chango";
     src: url("/fonts/Chango-Regular.woff2") format("woff2"), url('/fonts/Chango-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+  }
+
+  @font-face {
+    font-family: "Roboto";
+    src: url("/fonts/Roboto-Medium.woff2") format("woff2"), url('/fonts/Roboto-Medium.woff') format('woff');
     font-weight: 500;
     font-style: normal;
   }
