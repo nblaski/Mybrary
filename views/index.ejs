@@ -1,8 +1,22 @@
-<h1>Recently Added</h1>
-<div>
-    <% books.forEach(book => { %>
-        <a href="/books/<%= book.id %>">
-            <img height="150" width="100" src="<%= book.coverImagePath %>">
-            <% }); %>
-        </a>
+
+<div class="grid-container intro">
+        <div>
+            <h1>The Recipe Box</h1>
+            <p class="lead text-dark">A collection of delicious recipes for you to use in the kitchen.</p>
+        </div>
+        <main class="grid-container grid-x grid-margin-x medium-up-2 large-up-3">
+        </main>
+</div>       
+<div class="jumbotron">
+
+    <h2>Recently Added</h2>
+    <div>
+        <% books.forEach(book => { %>
+            <a href="/books/<%= book.id %>" class="cell">
+                <img height="150" width="100" src="<%= book.coverImagePath %>">
+                <% }); %>
+            </a>
+    </div>
+
 </div>
+

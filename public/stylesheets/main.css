@@ -1,28 +1,37 @@
 @import 'shared/fonts.css';
+@import 'shared/form.css';
 
 :root {
     font-family: 'Roboto';
     font-size: 20px;
     text-decoration-line: none;
 }
+h2 {
+  font-size: 1.5em;
+}
 
 a:link {
     text-decoration: none;
   }
 
-  .mt-0 {
-    margin-top: 0 !important;
+  .intro {
+    margin-bottom: .75em;
+    margin-top: .75em;
+    margin-left: 1em;
+
+
   }
-  
-  .ml-1 {
-    margin-left: (spacer * .25) !important;
+
+  .intro {
+    border-bottom: 1px solid #dcdada;
   }
-  
-  .px-2 {
-    padding-left: (spacer * .5) !important;
-    padding-right: (spacer * .5) !important;
-  }
-  
-  .p-3 {
-    padding: spacer !important;
+
+  .cell {
+    display: inline-block;
+    text-align: center;
+    padding: .5em;
+    margin-bottom: 1.5em;
+    outline-style: solid;
+    outline: rgb(48, 48, 48);
+    background-color: rgb(255, 255, 255);
   }
