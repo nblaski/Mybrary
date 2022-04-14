@@ -1,3 +1,4 @@
+<div class="grid-container intro">
 <h1>Search Author</h1>
 <form action="/authors" method="GET">
     <label>Name</label>
@@ -5,11 +6,24 @@
     <button type="submit">Search</button>
 </form>
 <br>
-<% authors.forEach(author => { %>
-    <div><%= author.name %></div>
-    <a href="/authors/<%= author.id %>">View</a>
-    <a href="/authors/<%= author.id %>/edit">Edit</a>
-    <!-- //SEE deleteForm.ejs partial for important note -->
-    <!-- //All code in the include() is run on server so need to use string interpolation to call the author.id- write as normal javascript  -->
-    <%- include('../partials/deleteForm', { url: `/authors/${author.id}` }) %>
-<% }); %>
+    <% authors.forEach(author => { %>
+        <div class="authName"><%= author.name %></div>
+        <div class="grid-container into">
+            <div class="d-flex flex-row">
+                <div class="row">
+                    <div class="col-small">
+                        <a href="/authors/<%= author.id %>" class="btn btn-primary">View</a>
+                    </div>
+                    <div class="col-small">
+                        <a href="/authors/<%= author.id %>/edit" class="btn btn-warning">Edit</a>
+                    </div>
+                    <div class="col-small">
+                        <!-- //SEE deleteForm.ejs partial for important note -->
+                        <!-- //All code in the include() is run on server so need to use string interpolation to call the author.id- write as normal javascript  -->
+                        <%- include('../partials/deleteForm', { url: `/authors/${author.id}` }) %>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>
